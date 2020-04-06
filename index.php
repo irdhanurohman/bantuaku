@@ -1,4 +1,6 @@
 <?php
+
+require_once 'vendor/autoload.php';
 /**
  * CodeIgniter
  *
@@ -63,7 +65,13 @@
  * Different environments will require different levels of error reporting.
  * By default development will show errors but testing and live will hide them.
  */
-switch (ENVIRONMENT)
+
+
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
+
+switch (getenv('APP_MODE'))
 {
 	case 'development':
 		error_reporting(-1);
@@ -313,10 +321,7 @@ switch (ENVIRONMENT)
  * And away we go...
  */
 
- /* !rename function built_in php */
 
-require_once 'vendor/autoload.php';
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-$dotenv->load();
+
 
 require_once BASEPATH.'core/CodeIgniter.php';

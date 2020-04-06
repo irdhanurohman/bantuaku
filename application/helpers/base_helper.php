@@ -54,6 +54,17 @@ if(!function_exists('url'))
 }
 
 
+if(!function_exists('hashing'))
+{
+
+	function hashing($text)
+	{
+		return password_hash($text, PASSWORD_BCRYPT);
+	}
+
+}
+
+
 
 
 

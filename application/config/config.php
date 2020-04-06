@@ -25,6 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $config['base_url'] = getenv('APP_URL');
 
+
 /*
 |--------------------------------------------------------------------------
 | Index File
@@ -89,7 +90,7 @@ $config['language']	= 'english';
 | See http://php.net/htmlspecialchars for a list of supported charsets.
 |
 */
-$config['charset'] = 'UTF-8';
+$config['charset'] = getenv('CHARSET');
 
 /*
 |--------------------------------------------------------------------------
@@ -100,7 +101,7 @@ $config['charset'] = 'UTF-8';
 | setting this variable to TRUE (boolean).  See the user guide for details.
 |
 */
-$config['enable_hooks'] = FALSE;
+$config['enable_hooks'] = getenv('APP_DEBUG');
 
 /*
 |--------------------------------------------------------------------------
@@ -136,7 +137,7 @@ $config['subclass_prefix'] = 'MY_';
 | Note: This will NOT disable or override the CodeIgniter-specific
 |	autoloading (application/config/autoload.php)
 */
-$config['composer_autoload'] = FALSE;
+$config['composer_autoload'] = false;
 
 /*
 |--------------------------------------------------------------------------
