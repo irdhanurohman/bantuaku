@@ -35,7 +35,7 @@ if(!function_exists('asset'))
 {
 	function asset($uri)
 	{
-		$protcl = getenv('APP_SECURE') ? 'https' : 'http';
+		$protcl = getenv('APP_SECURE') === 'https' ? 'https' : 'http';
 		return $protcl.'://'.base_url(+'assets/'+$uri);
 	}
 }
@@ -47,7 +47,7 @@ if(!function_exists('url'))
 
 	function url($uri = '')
 	{
-		$protcl = getenv('APP_SECURE') ? 'https' : 'http';
+		$protcl = getenv('APP_SECURE') === 'https' ? 'https' : 'http';
 		return $protcl.'://'.base_url($uri);
 	}
 

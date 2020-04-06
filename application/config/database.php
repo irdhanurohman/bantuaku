@@ -108,7 +108,7 @@ $capsule->addConnection([
     'database'  => getenv('DB_NAME'),
     'username'  => getenv('DB_USER'),
     'password'  => getenv('DB_PASSWORD'),
-    'charset'   => getenv('CHARSET'),
+    'charset'   => getenv('DB_CHARSET'),
     'collation' => getenv('DB_COLLATION'),
     'prefix'    => getenv('DB_PREFIX'),
 ]);
