@@ -1,5 +1,6 @@
 # BANTUKU | CodeIgniter
-
+![Bantuaku](https://images.unsplash.com/photo-1554734867-bf3c00a49371?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80)
+Bantuaku App
 
 ### CARA INSTALL
 #### #STEP 1
@@ -16,8 +17,9 @@
 3. Jika prosess download telah selesai jalankan perintah berikut.
 
     **
-> cd bantuku
-> composer install
+    cd bantuku
+    composer install
+
 **
 4. Tunggu hingga prosess selesai.. :D
 
