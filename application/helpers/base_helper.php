@@ -19,27 +19,19 @@ if(!function_exists('view'))
 
 if(!function_exists('asset'))
 {
-
-	function asset($uri)
-	{
-		$protcl = getenv('APP_SECURE') ? 'https' : 'http';
-		return $protcl.'://'.base_url($uri);
-	}
-
-
-}
-
-
-
-if(!function_exists('asset'))
-{
 	function asset($uri)
 	{
 		$protcl = getenv('APP_SECURE') === 'https' ? 'https' : 'http';
-		return $protcl.'://'.base_url(+'assets/'+$uri);
+		return $protcl.'://'.base_url('assets/'.$uri);
 	}
 }
 
+if(!function_exists('back'))
+{
+	function back() {
+		return redirect($_SERVER['HTTP_REFERER']);
+	}
+}
 
 
 if(!function_exists('url'))

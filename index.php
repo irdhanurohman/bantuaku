@@ -1,6 +1,7 @@
 <?php
 
 require_once 'vendor/autoload.php';
+use Dotenv\Dotenv;
 /**
  * CodeIgniter
  *
@@ -67,7 +68,7 @@ require_once 'vendor/autoload.php';
  */
 
 
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv = Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
 

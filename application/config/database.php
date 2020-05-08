@@ -80,9 +80,9 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
+	'hostname' => getenv('DB_HOST'),
 	'username' => getenv('DB_USER', 'root'),
-	'password' => getenv('DB_PASSWORD', ''),
+	'password' => getenv('DB_PASSWORD', 'root'),
 	'database' => getenv('DB_NAME',''),
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
